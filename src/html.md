@@ -155,21 +155,62 @@ HTML
     </tr>
   </table>
   ```
+- example
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table>
+
+- `<table>`	Defines a table
+- `<th>`	Defines a header cell in a table
+- `<tr>`	Defines a row in a table
+- `<td>`	Defines a cell in a table
+- `<caption>`	Defines a table caption
+- `<colgroup>`	Specifies a group of one or more columns in a table for formatting
+- `<col>`	Specifies column properties for each column within a `<colgroup>` element
+- `<thead>`	Groups the header content in a table
+- `<tbody>`	Groups the body content in a table
+- `<tfoot>`	Groups the footer content in a table
 
 <table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
+  <caption>Fruit Table</caption>
+
+  <colgroup>
+    <col style="background-color: #f2f2f2;">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Apple</td>
+      <td>$2</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>$2</td>
+    </tr>
+  </tfoot>
 </table>
