@@ -48,7 +48,8 @@
           <li>provide <b>additional information</b> about HTML elements.</li>
           <li><code>href</code> in &lt;a&gt; tag</li>
           <li><code>style</code>: used to add styles to an element, such as color, font, size, and more</li>
-          <li><code>lang</code> in &lt;html&gt;: declare the language of the Web page. This is meant to assist search engine and browsers</li>
+          <li><code>lang</code> in &lt;html&gt;: declare the language of the Web page. This is meant to assist search
+            engine and browsers</li>
           <li><code>title</code>: defines some extra information about an element</li>
         </ul>
       </li>
@@ -71,7 +72,8 @@
           <li>&lt;p&gt;</li>
           <li>&lt;hr&gt;: defiens a thematic break in an HTML page (horizontal rule)</li>
           <li>&lt;br&gt;: defines a line break</li>
-          <li>&lt;pre&gt;: displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks</li>
+          <li>&lt;pre&gt;: displayed in a fixed-width font (usually Courier), and it preserves both spaces and line
+            breaks</li>
         </ul>
       </li>
 
@@ -102,13 +104,59 @@
           <li>&lt;ins&gt;: <ins>Inserted text</ins></li>
           <li>&lt;sub&gt;: <sub>Subscript</sub>text</li>
           <li>&lt;sup&gt;: <sup>Superscript</sup>text</li>
-
         </ul>
       </li>
 
-
+      <li>
+        Quotations
+        <ul>
+          <li>&lt;blockquote&gt;: defines a section that is quoted from another source
+            <p>Here is a quote from WWF's website:</p>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+              For 60 years, WWF...
+            </blockquote>
+          </li>
+          <li>&lt;q&gt;: defines a short quotation
+            <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+          </li>
+          <li>&lt;abbr&gt;: defines an abbreviation or an acronym like HTML, CSS, ...
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+          </li>
+          <li>&lt;address&gt;: defines the contact information for the author/owner of a document or an article
+            <br>example:
+            <blockquote>
+              <address>
+                Written by John Doe.<br>
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Disneyland<br>
+                USA
+              </address>
+            </blockquote>
+          </li>
+          <li>&lt;cite&gt;: defines the title of a creative work
+            <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+          </li>
+          <li>&lt;bdo&gt;: used to override the current text direction
+            <bdo dir="rtl">This text will be written from right to left</bdo>
+          </li>
+        </ul>
+      </li>
     </ol>
 
+  </div>
+
+  <div title="CSS">
+    <h2>A Simple CSS</h2>
+    <ul>
+      <li><strong>inline</strong> - by using the <code>style</code> attribute inside the HTML elements
+        <h1 style="color:yellow;">A Blue Heading</h1>
+      </li>
+      <li><strong>Internal</strong> - by using the <code>&lt;style&gt;</code> elements in the <code>&lt;head&gt;</code>
+        section </li>
+      <li><strong>External</strong> - by using the <code>&lt;link&gt;</code> element to link to an external CSS file
+      </li>
+    </ul>
   </div>
 </body>
 
