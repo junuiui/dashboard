@@ -374,5 +374,7 @@ HTML
 - Use border:none; to remove the border around the iframe
   
 Example
-<iframe src="https://www.w3schools.com/html/html_iframe.asp" name="iframe_w3" title="Iframe Example"> </iframe>
-<p><a href="https://www.w3schools.com" target="iframe_w3">W3Schools.com</a></p>
+<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
