@@ -2,6 +2,10 @@ HTML
 ===
 
 - [HTML](#html)
+- [Basic](#basic)
+  - [meta](#meta)
+    - [Viewpoint](#viewpoint)
+    - [base](#base)
   - [Links](#links)
     - [Syntax](#syntax)
     - [Target Attribute](#target-attribute)
@@ -34,6 +38,48 @@ HTML
     - [Syntax](#syntax-1)
     - [Types](#types)
   - [Iframes](#iframes)
+  - [JavaScript](#javascript)
+    - [Select an HTML element](#select-an-html-element)
+  - [Computercode](#computercode)
+    - [Keyboard Input](#keyboard-input)
+    - [Program Output](#program-output)
+    - [Computer code](#computer-code)
+    - [Preserve Line-breaks](#preserve-line-breaks)
+    - [Variable / Mathematical Expression](#variable--mathematical-expression)
+  - [Semantics](#semantics)
+- [Form](#form)
+    - [form types](#form-types)
+    - [attributes](#attributes)
+    - [`<form>`](#form-1)
+    - [Elements](#elements)
+    - [Input types](#input-types)
+    - [Input Attributes](#input-attributes)
+
+# Basic
+## meta
+- specify the caracter set, page description, keywords, author of the document and viewpoint setting
+- Usage
+  - Define the character set
+    - `<meta charset="UTF-8">`
+  - Define keywords for search engines:
+    - `<meta name="keywords" content="HTML, CSS, JavaScript">`
+  - Define a description of your web page:
+    - `<meta name="description" content="Free Web tutorials">`
+  - Define the author of a page:
+    - `<meta name="author" content="John Doe">`
+  - Refresh document every 30 seconds:
+    - `<meta http-equiv="refresh" content="30">`
+  - Setting the viewport to make your website look good on all devices:
+    - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+### Viewpoint
+- user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.
+
+### base
+- The `<base>` element specifies the base URL and/or target for all relative URLs in a page.
+- The `<base>` tag must have either an href or a target attribute present, or both.
+- There can only be one single `<base>`element in a document!
+
 
 
 ## Links
@@ -374,7 +420,160 @@ HTML
 - Use border:none; to remove the border around the iframe
   
 Example
+```html
 <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
 
 <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+```
 
+## JavaScript
+- `<script>`: used to define a client-side script (js)
+  - element either contains script statements, or it points to an external script file through the src attribute
+
+### Select an HTML element
+`document.getElementById()` method
+
+```html
+<script>
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  document.getElementById("demo").style.fontSize = "25px";
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";
+  document.getElementById("image").src = "picture.gif";
+</script>
+
+```
+
+## Computercode
+### Keyboard Input
+```html
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+```
+
+### Program Output
+```html
+<p>Message from my computer:</p>
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+```
+
+### Computer code
+```html
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+```
+
+### Preserve Line-breaks
+```html
+<!-- Since <code> does not preserve extra whitespace and line-break -->
+<pre>
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+```
+
+### Variable / Mathematical Expression
+```html
+<!-- <var> -->
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+```
+
+## Semantics
+- `<article>`	Defines independent, self-contained content
+- `<aside>`	Defines content aside from the page content
+- `<details>`	Defines additional details that the user can view or hide
+- `<figcaption>`	Defines a caption for a `<figure>` element
+- `<figure>`	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+- `<footer>`	Defines a footer for a document or section
+- `<header>`	Specifies a header for a document or section
+- `<main>`	Specifies the main content of a document
+- `<mark>`	Defines marked/highlighted text
+- `<nav>`	Defines navigation links
+- `<section>`	Defines a section in a document
+- `<summary>`	Defines a visible heading for a `<details>` element
+- `<time>`	Defines a date/time
+
+# Form
+
+### form types
+- `<input type="text">`	Displays a single-line text input field
+- `<input type="radio">`	Displays a radio button (for selecting one of many choices)
+- `<input type="checkbox">`	Displays a checkbox (for selecting zero or more of many choices)
+- `<input type="submit">`	Displays a submit button (for submitting the form)
+- `<input type="button">`	Displays a clickable button
+
+### attributes
+- `type` : defines the type
+- `id`: unique id
+- `name`: name of the input
+- `value`: name of the input
+- `for`: pointing input id of the label
+- `action`: form-handler (put beside form element as attribute) - triggers when `<input type="submit">`	is clicked
+
+### `<form>` 
+- `action` attribute
+  - defines the action to be performed when the form is submitted.
+  - Usually, the form data is wsent to a file on the server when the user clicks on the submit button
+
+- `target` attribute
+  - specifies where to display the response that is received after submitting the form
+  - _blank	The response is displayed in a new window or tab
+  - `_self`	The response is displayed in the current window
+  - `_parent`	The response is displayed in the parent frame
+  - `_top`	The response is displayed in the full body of the window
+  - `framename`	The response is displayed in a named iframe
+
+- `method` attribute
+  - specifies the HTTP method to be used when submitting the form data
+  - `get`: good for non-secure data
+  - `post`: appends the form data inside the body of the TTP request
+  
+- `autocomplete` attribute
+  - specifies whether a form should have autocomplete on or off
+  - When autocomplete is on, the browser automatically complete values based on values that the user has entered before
+  
+- `nonvalidate` attribute
+  - boolean, when present, it specifies the form-data (input) should not be validated when submitted
+
+### Elements
+- `<input>`: displayed in serveral ways, depending on the type attribute
+- `<label>`: The `for` attribute of the `<label>` tag should be equal to the `id` attribute of the `<input>` element to bind them together.
+- `<select>`
+  - The `<option>` element defines an option that can be selected.
+    - `selected`: pre-selected option
+  - `size='_'`: specify the number of visible values
+  - `multiple`: use to select more than one value
+
+### Input types
+- `type=reset`: resets all form values to default
+- `type=date`: input fields that should contain date
+  - `min=2000-01-02`, `max=2999-12-31`
+- `type="datetime-local"`: specifies a date and time input field with no time zone
+- `type=file`: file-select field
+- `hidden`: hidden input field
+- `type=number`
+  - `min`, `max`
+- `type="range"`: slider control
+- `type="tel"`: telephone number
+  - `<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">`
+
+### Input Attributes
+- `list="___"`: attributes refers to a `<datalist>` element that contains pre-defined options for `<input>` element
+
+  ```html
+  <form>
+    <input list="browsers">
+    <datalist id="browsers">
+      <option value="Edge">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+  </form>
+  ```
