@@ -12,7 +12,7 @@ HTML
   - [Images](#images)
     - [Image Maps](#image-maps)
     - [Background image](#background-image)
-    - [`<picture>`](#picture)
+    - [picture](#picture)
   - [Favicon](#favicon)
   - [Title](#title)
   - [Table](#table)
@@ -22,9 +22,18 @@ HTML
     - [Styling](#styling)
     - [Colgroup](#colgroup)
   - [Lists](#lists)
-    - [ul](#ul)
-    - [ol](#ol)
-    - [other (dl)](#other-dl)
+    - [ul (Unordered List)](#ul-unordered-list)
+    - [ol (Ordered List)](#ol-ordered-list)
+    - [dl (Description List)](#dl-description-list)
+  - [div](#div)
+    - [Flex (1-D)](#flex-1-d)
+    - [Grid (2-D)](#grid-2-d)
+  - [Class](#class)
+  - [id](#id)
+  - [Buttons](#buttons)
+    - [Syntax](#syntax-1)
+    - [Types](#types)
+  - [Iframes](#iframes)
 
 
 ## Links
@@ -108,7 +117,7 @@ HTML
   }
   </style>
   ```
-### `<picture>`
+### picture
 - Show different images for different screen sizes
   ```html
   <picture>
@@ -135,7 +144,7 @@ HTML
     <title>HTML Tutorial</title>
   </head>
   ```
-- The <title> element:
+- The `<title>` element:
   - defines a title in the browser toolbar
   - provides a title for the page when it is added to favorites
   - displays a title for the page in search engine-results
@@ -198,7 +207,7 @@ HTML
   <caption>Fruit Table</caption>
 
   <colgroup>
-    <col style="background-color: #f2f2f2;">
+    <col style="background-color: rgba(0,0,0,0);">
     <col>
   </colgroup>
 
@@ -282,8 +291,7 @@ HTML
 - visibility: `<col span="3" style="visibility: collapse">` : hide columns
 
 ## Lists
--
-### ul
+### ul (Unordered List)
   - change list item marker: `list-style-type: `
     - `disc`
     - `circle`
@@ -296,15 +304,75 @@ HTML
     }
     ```
   - `overflow: hidden;`: float crack prevention (parent can't recog child height)
-### ol
+### ol (Ordered List)
 - change the list item marker: `<ol type="1">`
   - `type="1"`
   - `type="A"`
   - `type="a"`
   - `type="I"`
   - `type="i"`
-### other (dl)
+### dl (Description List)
 - description list: list of terms, with a description of each term
   - `<dl>` -> defines description list
   - `<dt>` -> defines the term (name)
   - `<dd>` -> describes each term
+
+## div
+### Flex (1-D)
+- Make it easie rto design flexible responsive layout structure without using float or positioning
+- `display: flex;`
+
+### Grid (2-D)
+- grid-based layout - rows and columns
+- **A Grid Container** - The parent (container) element, where the display property is set to `grid` or `inline-grid`
+- **One or more Grid Items** - The direct children of the grid container automatically becomes grid items
+
+    ```css
+    .container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: dodgerblue;
+      padding: 10px;
+    }
+    .container div {
+      background-color: #f1f1f1;
+      border: 1px solid black;
+      padding: 10px;
+      font-size: 30px;
+      text-align: center;
+    }
+    ```
+
+## Class
+- `class` attribute: 
+  - used to point to a class name in a style sheet
+  - used for JavaScript to access and manipulate elements with the specific class name
+- `.className` with css
+
+## id
+- `id` attribute:
+  - specifies a **UNIQUE** id for an HTML element
+  - the value of the id must be **UNIQUE** within the HTML document
+  - used to point to a specific style declaration in a style sheet
+  - used for JavaScript to access and manipulate elements with the specific id
+- `#id` with css
+
+## Buttons
+### Syntax
+`<button> Click me </button>`
+
+### Types
+- `type="button"`: Normal clickable buton (does nothing by default)
+- `type="submit"`: Submits a form
+- `type="reset"`: Resets all form fields
+
+## Iframes
+- The HTML `<iframe>` tag specifies an inline frame
+- The src attribute defines the URL of the page to embed
+- Always include a title attribute (for screen readers)
+- The height and width attributes specify the size of the iframe
+- Use border:none; to remove the border around the iframe
+  
+Example
+<iframe src="https://www.w3schools.com/html/html_iframe.asp" name="iframe_w3" title="Iframe Example"> </iframe>
+<p><a href="https://www.w3schools.com" target="iframe_w3">W3Schools.com</a></p>
