@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+  <title>Counter</title>
+</head>
+
+<script src="./index.js" defer></script>
+
+<style>
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 제목 스타일 */
+#main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ff4d4d;
+  text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+/* 메인 카운터 UI 박스 */
+#main-ui {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #333;
+}
+
+/* 숫자 스타일 */
+#value {
+  font-size: 3rem;
+  font-weight: 800;
+  min-width: 80px;
+  text-align: center;
+  font-variant-numeric: tabular-nums; /* 숫자 너비 고정 */
+}
+
+/* 버튼 스타일 */
+button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #ff4d4d;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* 로그 기록 섹션 */
+#history {
+  margin-top: 2rem;
+  width: 300px;
+  text-align: center;
+}
+
+#logs {
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 10px;
+  border: 1px inset #333;
+}
+
+</style>
+
+<body>
+
+  <div id="main-title">
+    Counter App
+  </div>
+
+  <div id="main-ui">
+    <button onclick="decreaseValue()">-</button>
+    <span id="value">0</span>
+    <button onclick="increaseValue()">+</button>
+  </div>
+
+  <div id="history">
+    <b>Logs:</b>
+    <p id="logs">
+      <!-- place holder -->
+    </p>
+  </div>
+
+</body>
+
+</html>
