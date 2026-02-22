@@ -16,6 +16,15 @@ HTML
   - [Favicon](#favicon)
   - [Title](#title)
   - [Table](#table)
+    - [Table Styles](#table-styles)
+    - [Spacing](#spacing)
+    - [Span](#span)
+    - [Styling](#styling)
+    - [Colgroup](#colgroup)
+  - [Lists](#lists)
+    - [ul](#ul)
+    - [ol](#ol)
+    - [other (dl)](#other-dl)
 
 
 ## Links
@@ -214,3 +223,88 @@ HTML
     </tr>
   </tfoot>
 </table>
+
+### Table Styles
+- `border-style`
+  - `dotted`     
+  - `dashed`     
+  - `solid`     
+  - `double`     
+  - `groove`     
+  - `ridge`     
+  - `inset`     
+  - `outset`     
+  - `none`     
+  - `hidden` 
+- `border-color`
+
+  ```html
+  table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: #96D4D4;
+  }
+  ```
+
+### Spacing
+- `padding: 15px`: padding inside each cell
+- `border-spacing: 30px`: Cell spacing = between each cell
+
+### Span
+- `<th colspan="2">Name</th>`
+- `<th rowspan="2">Phone</th>`
+
+### Styling
+  ```html
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+
+  td:nth-child(even), th:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  ```
+- `tr:hover {background-color: #D6EEEE;}`
+
+### Colgroup
+- The `<colgroup>` element should be used as a container for the column specifications.
+- Each group is specified with a `<col>` element.
+- The span attribute specifies how many columns get the style.
+- The style attribute specifies the style to give the columns.
+- Empty
+  ```html
+  <colgroup>
+    <col span="3">
+    <col span="2" style="background-color: pink">
+  </colgroup>
+  ```
+- visibility: `<col span="3" style="visibility: collapse">` : hide columns
+
+## Lists
+-
+### ul
+  - change list item marker: `list-style-type: `
+    - `disc`
+    - `circle`
+    - `square`
+    - `none`
+  - horizontal listing
+    ```html
+    li {
+      float: left;
+    }
+    ```
+  - `overflow: hidden;`: float crack prevention (parent can't recog child height)
+### ol
+- change the list item marker: `<ol type="1">`
+  - `type="1"`
+  - `type="A"`
+  - `type="a"`
+  - `type="I"`
+  - `type="i"`
+### other (dl)
+- description list: list of terms, with a description of each term
+  - `<dl>` -> defines description list
+  - `<dt>` -> defines the term (name)
+  - `<dd>` -> describes each term
